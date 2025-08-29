@@ -1,0 +1,13 @@
+services:
+  jizendo:
+    build: .
+    container_name: jizendo
+    ports:
+      - "3011:3011/tcp" # Added HTTP API port
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env.production
+    stdin_open: true # for -i (interactive)
+    tty: true # for -t (tty)
+    restart: unless-stopped # automatically restart, equivalent to --rm but better

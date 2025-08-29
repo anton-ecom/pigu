@@ -1,0 +1,164 @@
+.floating {
+  background-color: var(--field__background);
+  transition: background-color 0.2s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.floating:hover,
+.floating:focus-within {
+  background-color: var(--field__background--hover);
+}
+
+.floating_input {
+  padding: 1.4rem 1rem 0.4rem;
+  border-bottom: 0.1rem solid var(--input__border);
+  transition: border-color 0.2s ease;
+  caret-color: var(--color__accent);
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(229, 231, 235);
+}
+
+select.floating_input {
+  -webkit-appearance: none;
+}
+
+.floating_input.is-valid {
+  border: 1px solid rgb(8, 189, 50);
+  background: rgb(245, 253, 247);
+}
+
+.floating_input.is-invalid {
+  border: 1px solid rgb(248, 43, 132);
+  background: rgb(255, 231, 241);
+}
+
+.floating input:disabled {
+  background: rgba(229, 231, 235);
+}
+
+.floating input:read-only {
+  background: rgba(229, 231, 235);
+}
+
+.floating select:disabled {
+  background: rgba(229, 231, 235);
+}
+/*
+  .floating:hover .floating__input {
+    border-color: var(--input__border--hover);
+  } */
+
+.floating_input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+.floating_label {
+  display: block;
+  position: relative;
+  max-height: 0;
+  font-weight: 500;
+  pointer-events: none;
+  color: gray;
+}
+
+.floating_label::before {
+  color: var(--label__color);
+  content: attr(data-content);
+  display: inline-block;
+  filter: blur(0);
+  backface-visibility: hidden;
+  transform-origin: left top;
+  transition: transform 0.2s ease;
+  left: 1rem;
+  top: 0.2rem;
+  position: relative;
+}
+
+.floating_label::after {
+  bottom: 1rem;
+  content: "";
+  height: 0.1rem;
+  position: absolute;
+  transition:
+    transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s ease;
+  opacity: 0;
+  left: 0;
+  top: 100%;
+  margin-top: -0.5rem;
+  transform: scale3d(0, 1, 1);
+  width: 100%;
+  background-color: var(--color__accent);
+}
+
+.floating_input:focus + .floating_label::after {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.floating_input:placeholder-shown + .floating_label::before {
+  transform: translate3d(0, -2.4rem, 0) scale3d(1, 1, 1);
+}
+
+.floating_label::before,
+.floating_input:focus + .floating_label::before {
+  transform: translate3d(0, -3.32rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+.floating_input:focus + .floating_label::before {
+  color: var(--color__accent);
+}
+
+.hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.floating {
+  .floating_label {
+    @apply text-sm;
+  }
+
+  .floating_input:focus {
+    @apply outline  dark:outline-neutral-600 outline-1 outline-gray-300;
+  }
+
+  .floating_input {
+    @apply dark:bg-neutral-900/50 border dark:border-neutral-700 rounded;
+
+    &.is-invalid {
+      @apply dark:border-red-800;
+    }
+
+    &.is-valid {
+      @apply dark:border-green-800;
+    }
+  }
+
+  .floating_input:disabled {
+    @apply dark:bg-neutral-800 dark:border-neutral-800 rounded dark:text-neutral-100 opacity-50;
+  }
+
+  .floating_input:disabled + .floating_label::before {
+    @apply dark:text-neutral-500 text-gray-400;
+  }
+
+  select.floating_input {
+    @apply dark:bg-neutral-900/50 bg-transparent;
+  }
+
+  select.floating_input + .floating_label::before {
+    left: 1rem;
+    top: 0.4rem;
+  }
+}

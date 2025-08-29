@@ -1,0 +1,68 @@
+.form-control {
+  @apply h-10 px-2 relative bg-gray-50 border border-gray-300 text-gray-900 text-sm  block w-full  dark:bg-neutral-950 dark:border-neutral-700 dark:placeholder-gray-400 dark:text-white;
+
+  &.form-control-sm {
+    @apply px-2  h-8 text-sm;
+  }
+
+  &.form-control-lg {
+    @apply p-3 text-base h-12;
+  }
+
+  &.form-control-xl {
+    @apply px-5 text-xl h-14;
+  }
+
+  &.form-input-red {
+    @apply border-red-500 dark:border-red-500 dark:bg-red-900/25;
+  }
+}
+.input-group {
+  .form-control {
+    @apply rounded-r-none border-r-0;
+  }
+}
+
+.form-control:focus {
+  @apply outline outline-0 focus:ring-neutral-500 focus:border-neutral-500  dark:outline-neutral-600   outline-gray-300 ring-0;
+
+  &.form-input-red {
+    @apply dark:focus:outline-red-500 border-red-600;
+  }
+}
+
+.form-control:disabled {
+  @apply bg-gray-200 text-gray-500 dark:bg-neutral-800 dark:text-neutral-400;
+}
+
+textarea.form-control {
+  @apply p-2.5 w-full text-base text-gray-900 bg-gray-50 min-h-32 border border-gray-300  dark:bg-neutral-950 dark:border-neutral-700 dark:placeholder-gray-400 dark:text-white;
+}
+select.form-control {
+  @apply h-10 text-sm;
+}
+
+input[type="checkbox"].form-control {
+  @apply dark:bg-neutral-700;
+}
+
+.form-group {
+  .form-control {
+    @apply pr-12;
+  }
+  .form-control-icon {
+    @apply right-0 py-2.5  absolute cursor-pointer  z-10 text-center w-12;
+  }
+}
+
+.form-label {
+  @apply block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400;
+}
+
+// Remove Safari Select styling
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

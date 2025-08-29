@@ -1,0 +1,121 @@
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.micromodal {
+  .modal__overlay {
+    @apply fixed bg-black/75 z-[99] top-0 left-0 flex flex-col items-center justify-center  w-full h-screen;
+  }
+
+  .modal__container {
+    @apply bg-white flex flex-col items-stretch  dark:bg-neutral-800 max-h-screen  rounded-md w-full md:w-[500px];
+
+    &.modal-lg {
+      @apply md:w-[700px];
+    }
+
+    &.modal-xl {
+      @apply md:w-full lg:w-[1024px];
+    }
+
+    &.modal-full {
+      @apply md:w-full 2xl:w-[1440px] h-full grow rounded-none;
+    }
+  }
+
+  .modal-header {
+    @apply flex justify-between items-center p-4 border-b dark:border-neutral-600;
+  }
+
+  .modal-title {
+    @apply text-xl font-semibold;
+  }
+
+  .modal__close {
+    @apply px-3 py-1.5 rounded-md hover:bg-gray-100 hover:dark:bg-neutral-700;
+  }
+
+  .modal-header .modal__close:before {
+    content: "\2715";
+  }
+
+  .modal-body {
+    @apply p-4 overflow-y-auto;
+  }
+
+  .modal-footer {
+    @apply p-3 border-t dark:border-neutral-600;
+  }
+
+  @keyframes mmfadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mmfadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes mmslideIn {
+    from {
+      transform: translateY(15%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes mmslideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10%);
+    }
+  }
+
+  &.micromodal-slide {
+    display: none;
+  }
+
+  &.micromodal-slide.is-open {
+    display: block;
+  }
+
+  &.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  &.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  &.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  &.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  &.micromodal-slide .modal__container,
+  &.micromodal-slide .modal__overlay {
+    will-change: transform;
+  }
+
+  .confirm-button {
+    @apply bg-blue-500 text-white px-8 py-3 rounded-md;
+  }
+  .cancel-button {
+    @apply bg-red-500 text-white px-8 py-2 rounded-md;
+  }
+}

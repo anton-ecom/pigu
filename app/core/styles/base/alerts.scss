@@ -1,0 +1,25 @@
+.alert {
+  @apply p-4 text-sm  rounded-lg flex space-x-2;
+
+  &.alert-sm {
+    @apply px-4 py-2;
+  }
+  &.alert-success {
+    @apply flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800;
+  }
+
+  &.alert-warning {
+    @apply dark:bg-transparent dark:text-yellow-400 dark:border-yellow-400 dark:border-2 text-amber-700  bg-yellow-100;
+  }
+  &.alert-danger {
+    @apply text-red-700 bg-red-100 dark:bg-red-200 dark:text-red-800;
+  }
+
+  &.alert-info {
+    @apply text-blue-700 bg-blue-100 dark:bg-blue-200 dark:text-blue-800;
+  }
+
+  &.alert-default {
+    @apply text-gray-700 bg-gray-100 rounded-lg dark:bg-neutral-700 dark:text-gray-300;
+  }
+}

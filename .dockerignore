@@ -1,0 +1,10 @@
+node_modules
+/.cache
+/build
+.env
+/app/build
+/public/build
+/public/upload
+.react-router/
+app/database/generated
+# package-lock.json
