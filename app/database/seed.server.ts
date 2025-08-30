@@ -13,7 +13,7 @@ const supabaseAdmin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE, {
 
 const prisma = new PrismaClient();
 
-const email = "anton@jizendo.com";
+const email = "anton@ecom.eu";
 const password = "";
 
 const getUserId = async (): Promise<string> => {

@@ -21,7 +21,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             <div>
               <img
                 src={`/assets/icon-${theme}.svg`}
-                alt="Jizendo"
+                alt="Pigu.shop"
                 className="h-8"
               />
             </div>

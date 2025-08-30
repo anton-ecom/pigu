@@ -16,8 +16,8 @@ import IndexLayout from "~/components/IndexLayout";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Jizendo - The Way of Philanthropy" },
-    { name: "description", content: "Philosophy for Successfull Giving" },
+    { title: "Pigu.shop - Marketplace management platform" },
+    { name: "description", content: "Comprehensive platform to manage Pigu marketplaces" },
   ];
 };
 

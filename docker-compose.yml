@@ -1,7 +1,7 @@
 services:
-  jizendo:
+  pigu:
     build: .
-    container_name: jizendo
+    container_name: pigu
     ports:
       - "3011:3011/tcp" # Added HTTP API port
     environment:

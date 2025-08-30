@@ -42,9 +42,9 @@ FROM base
 
 
 ENV NODE_ENV="production"
-ENV PORT="3011"
+ENV PORT="3012"
 ENV HOST="0.0.0.0"
-ENV SERVER_URL="http://0.0.0.0:3011"
+ENV SERVER_URL="http://0.0.0.0:3012"
 
 
 # Install packages needed for deployment
@@ -58,5 +58,5 @@ COPY --from=build /app /app
 
 
 # Start the server by default, this can be overwritten at runtime
-EXPOSE 3011
+EXPOSE 3012
 CMD [ "npm", "run", "start" ]

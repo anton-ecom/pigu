@@ -19,6 +19,7 @@ export default function IndexLayout({ children }: LayoutProps) {
     <div className="max-w-screen-xl mx-auto flex flex-col items-stretch min-h-screen">
       <div className="flex items-center space-x-4 flex-row  justify-between md:px-10 px-4 py-4 shrink">
         <div className="space-x-3 flex items-center">
+          <div><img src="icon.svg" alt="icon" alt-label="icon" className="w-12 h-12"/></div>
           <svg
             className="h-5"
             viewBox="0 0 329 44"
@@ -338,8 +339,8 @@ export default function IndexLayout({ children }: LayoutProps) {
 
       
 
-          <div className="flex w-1/3 shadow border dark:border-neutral-800   flex-col h-full md:p-6 p-4  rounded-lg    shrink  ">
-            <div className="text-3xl font-bold mb-6">Launch fast</div>
+          <div className="flex w-1/3 bg-white dark:bg-transparent shadow border dark:border-neutral-800   flex-col h-full md:p-6 p-4  rounded-lg    shrink  ">
+            <div className="text-2xl font-semibold mb-6">Launch fast</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
                 <li>7-day setup guarantee</li>
@@ -354,8 +355,8 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex border mt-20 dark:border-neutral-800 w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink  ">
-            <div className="text-3xl font-bold mb-6">Scale Smart</div>
+          <div className="flex border  dark:border-neutral-800 w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink bg-white dark:bg-transparent ">
+            <div className="text-2xl font-semibold mb-6">Scale Smart</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
                 <li className="flex items-center">Process 10,000+ orders with one person</li>
@@ -369,8 +370,8 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex mt-40 w-1/3 shadow border dark:border-neutral-800  flex-col h-full  md:p-6 p-4 rounded-lg     shrink  ">
-            <div className="text-2xl font-bold mb-6">Profit More</div>
+          <div className="flex bg-white dark:bg-transparent w-1/3 shadow border dark:border-neutral-800  flex-col h-full  md:p-6 p-4 rounded-lg     shrink  ">
+            <div className="text-2xl font-semibold mb-6">Profit More</div>
             <div className="tex-lg">
               <ol className="flex flex-col space-y-2 text-lg">
                 <li>Return on investments in 6 month</li>
