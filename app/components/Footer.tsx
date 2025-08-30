@@ -2,10 +2,10 @@ import { Link } from "react-router";
 
 export function Footer() {
   return (
-    <div className="md:text-base text-lg border-neutral-700 space-y-2 md:space-y-0 py-4 flex justify-between md:flex-row flex-col items-center ">
+    <div className="md:text-base text-lg  space-y-2 md:space-y-0 py-4 flex justify-between md:flex-row flex-col items-center ">
       <div className="flex  items-center md:flex-row flex-col md:space-x-4 md:space-y-0 space-x-0 space-y-1 ">
-        <div className="font-bold ">Ji-Zen-Do </div>
-        <div className="text-secondary text-base">The Way of Philanthropy</div>
+        <div className="font-bold ">Ecom Europe Limited</div>
+        <div className="text-secondary text-base">Leader in e-commerce solutions</div>
       </div>
       <div className="flex md:space-x-2  md:flex-row md:space-y-0 space-y-2 ">
         <div className="flex flex-row  space-x-4 ">

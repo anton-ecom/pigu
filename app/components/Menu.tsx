@@ -26,7 +26,7 @@ export function Menu({ menuItems }: MenuProps) {
 function MenuItem({ item }: { item: MenuItem }) {
   return (
     <Link to={item.url}>
-      <div className="flex w-full space-x-2 md:text-base">
+      <div className="flex w-full text-white space-x-2 md:text-base">
         <div>{item.name}</div>
       </div>
     </Link>

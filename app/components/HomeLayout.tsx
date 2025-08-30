@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import { menuItems } from "~/config/menu-items";
 
 import ThemeToggle from "~/components/ThemeToggle";
+import { Check } from "lucide-react";
 interface LayoutProps {
   children: ReactNode;
 }
@@ -19,20 +20,9 @@ export default function IndexLayout({ children }: LayoutProps) {
       <div className="flex items-center space-x-4 flex-row  justify-between md:px-10 px-4 py-4 shrink">
         <div className="space-x-3 flex items-center">
           <svg
-            className="h-10"
-            fill="#1B9BDB"
-            viewBox="0 0 32 32"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Pigu</title>
-            <path d="M0 16q0 2.496 1.216 4.608t3.328 3.328 4.608 1.216q1.504 0 3.072-0.576-1.472-1.824-2.272-4.064-0.544 0.064-0.8 0.064-1.888 0-3.232-1.344t-1.344-3.232 1.344-3.232 3.232-1.344 3.232 1.344 1.344 3.232q0 2.496 1.216 4.608t3.328 3.328 4.576 1.216 4.608-1.216 3.328-3.328 1.216-4.608-1.216-4.576-3.328-3.328-4.608-1.216q-1.504 0-3.072 0.544 1.472 1.824 2.272 4.096 0.544-0.096 0.8-0.096 1.888 0 3.232 1.344t1.344 3.232q0 1.92-1.344 3.264t-3.232 1.312q-1.888 0-3.232-1.312t-1.344-3.264q0-2.464-1.216-4.576t-3.328-3.328-4.576-1.216-4.608 1.216-3.328 3.328-1.216 4.576z" />
-          </svg>
-
-          <svg
             className="h-5"
             viewBox="0 0 329 44"
-            fill="currentColor"
+            fill="#fff"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>Shop</title>
@@ -46,49 +36,49 @@ export default function IndexLayout({ children }: LayoutProps) {
           <div className=" space-x-4 md:flex hidden items-center">
             <Menu menuItems={menuItems} />
           </div>
-          <button type="button" className="btn btn-success btn-pill ">
+          <button type="button" className="btn btn-outline-white btn-pill  ">
             Request Demo
           </button>
         </div>
       </div>
 
       <div
-        style={{ backgroundImage: "url('/9-waves-sky-vertical.svg')" }}
-        className="overflow-hidden hidden  absolute z-[-1] h-[700px] w-full bg-cover bg-center "
+        style={{ backgroundImage: "url('/BackgroundHero.svg')" }}
+        className="overflow-hidden    absolute z-[-1] h-full w-full bg-cover bg-center"
       />
 
-      <div className="relative  flex flex-col items-center  bg-gradient-to-t     md:px-10 px-4  shrink ">
+      <div className="relative  flex flex-col items-center h-[460px]    md:px-10 px-4  shrink ">
         <div className="py-10 md:space-x-10 flex-col md:flex-row flex  items-center justify-between w-full">
-          <div className="flex flex-row flex-grow items-end justify-center ">
-            <img
-              src={"/pigu-main.png"}
-              alt="Pigu Logo"
-              className="h-[500px] rounded-3xl mb-4"
-            />
-          </div>
-          <div className="px-10  md:w-2/3 space-y-10 items-center justify-center w-full">
-            <div className="text-[50px] font-bold mb-1">
-              Become Pigu Seller in 7 days
-            </div>
-            <div className="text-semibold text-2xl">
-              Your Marketplace management platform ready to boots your sales
+          <div className="flex flex-col space-y-8 items-center justify-center w-full h-[500px]">
+            <div className="flex space-y-8 flex-col">
+              <div className="text-[50px] font-bold mb-1 text-white">
+                Start Selling on Pigu Marketplace
+              </div>
+              <div className="text-semibold text-2xl text-white">
+                Premium Marketplace management platform ready to boost your
+                sales
+              </div>
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-8">
               <button type="button" className="btn btn-black btn-pill btn-lg">
                 Schedule Demo
               </button>
 
               <button
                 type="button"
-                className="btn  btn-outline-default btn-pill btn-lg"
+                className="btn  btn-outline-white btn-pill btn-lg"
               >
                 Features
               </button>
             </div>
 
             <div className="flex space-x-6">
-              <img src={"./markets/lt.svg"} className="h-8" alt="Pigu.lt" />
+              <img
+                src={"./markets/lt.svg"}
+                className="h-8 fill-white"
+                alt="Pigu.lt"
+              />
               <img src={"./markets/lv.svg"} className="h-8" alt="Pigu.lv" />
               <img src={"./markets/ee.svg"} className="h-8" alt="Pigu.ee" />
               <img
@@ -101,102 +91,141 @@ export default function IndexLayout({ children }: LayoutProps) {
         </div>
       </div>
 
-      <div className="flex space-x-20 flex-col md:flex-row px-10 items-center ">
-        <div className="w-1/2">
+      <div className="flex space-x-20 flex-col  px-10 items-center ">
+        <div className="w-3/4 mb-10">
           <img
-            src={"/screen_dark.png"}
-            className="shadow-xl rounded-lg border-neutral-100"
+            src={`/screen_${theme}.png`}
+            className="shadow-md rounded-lg border-neutral-100"
             alt="Main screen"
           />
         </div>
         <div>
-          <div className="font-bold text-3xl w-1/2 mb-8">Features</div>
+          <div className="gap-10 flex-col  grid grid-cols-2 mb-12 w-11/12 items-center justify-center  mx-auto">
+            <div className=" flex flex-row space-x-6 items-center  ">
+              <div className=" from-sky-500 to-blue-700 bg-gradient-to-br  p-3 rounded-md">
+                <svg
+                  className="w-14 h-14"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Pigu API</title>
+                  <rect width="24" height="24" fill="transparent" />
+                  <path
+                    d="M20,6H4A2,2,0,0,0,2,8v8a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V8A2,2,0,0,0,20,6ZM9.29,14.8,9,13.73H7.16L6.87,14.8H5.17L7,9.07H9.09L11,14.8Zm6.34-3.14a1.7,1.7,0,0,1-.36.64,1.82,1.82,0,0,1-.67.44,2.75,2.75,0,0,1-1,.17h-.44V14.8H11.6V9.09h2a2.43,2.43,0,0,1,1.62.47,1.67,1.67,0,0,1,.55,1.35A2.36,2.36,0,0,1,15.63,11.66Zm2.58,3.14H16.66V9.09h1.55ZM8.45,11.53l.24.93H7.48l.24-.93c0-.13.08-.28.12-.47s.09-.38.13-.57a4.63,4.63,0,0,0,.1-.48c0,.13.07.29.11.5l.15.58Zm5.59-1a.57.57,0,0,1,.16.43.75.75,0,0,1-.11.42.59.59,0,0,1-.27.22.9.9,0,0,1-.37.07h-.31V10.34h.4A.63.63,0,0,1,14,10.51Z"
+                    fill="#fff"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
 
-          <div className="space-y-4 flex-col flex mb-6">
-            <div className="text-xl font-semibold flex space-x-2 items-center">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>User-friendly interface</title>
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                  fill="#04BF55"
-                />
-              </svg>
-
-              <div>Easy: User-friendly interface</div>
-            </div>
-            <div className="text-xl font-semibold  flex space-x-2 items-center">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>User-friendly interface</title>
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                  fill="#04BF55"
-                />
-              </svg>
-
-              <div>
-                <span>In Control: </span>Advanced analytics
+              <div className="flex flex-col space-y-2">
+                <div className="text-2xl font-semibold">Complete Pigu API </div>
+                <div className="text-md text-secondary w-3/4">
+                  Add products, manage orders, and update inventory all in one
+                  place
+                </div>
               </div>
             </div>
-            <div className="text-xl font-semibold flex space-x-2 items-center">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>User-friendly interface</title>
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                  fill="#04BF55"
-                />
-              </svg>
+            <div className=" flex flex-row space-x-6 items-center  ">
+              <div className=" from-emerald-500 to-emerald-700 bg-gradient-to-br  p-3 rounded-md">
+                <svg
+                  className="w-14 h-14"
+                  fill="white"
+                  viewBox="0 0 512 512"
+                  id="svg2793"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>User-friendly interface</title>
+                  <defs id="defs2797" />
+                  <g id="_24-Connect" transform="translate(-3072,-4096)">
+                    <g id="g2211" transform="translate(3339.32,4267.43)">
+                      <path
+                        d="m 0,169.14 c -44.818,0 -81.28,-36.462 -81.28,-81.28 0,-44.818 36.462,-81.28 81.28,-81.28 44.817,0 81.279,36.462 81.279,81.28 0,44.818 -36.462,81.28 -81.279,81.28 m -149.2,141.43 c -24.587,0 -44.59,-20.003 -44.59,-44.59 0,-24.587 20.003,-44.59 44.59,-44.59 24.587,0 44.59,20.003 44.59,44.59 0,24.587 -20.003,44.59 -44.59,44.59 m -83.91,-398.5 c 0,-29.5 24,-53.5 53.5,-53.5 29.494,0 53.49,24 53.49,53.5 0,29.494 -23.996,53.49 -53.49,53.49 -29.5,0 -53.5,-23.996 -53.5,-53.49 m 412.099,37 c 17.364,0 31.49,14.126 31.49,31.49 0,17.369 -14.126,31.5 -31.49,31.5 -17.369,0 -31.5,-14.131 -31.5,-31.5 0,-17.364 14.131,-31.49 31.5,-31.49 m -44.46,73.915 c 11.207,11.739 26.989,19.075 44.46,19.075 33.907,0 61.49,-27.589 61.49,-61.5 0,-33.906 -27.583,-61.49 -61.49,-61.49 -33.911,0 -61.5,27.584 -61.5,61.49 0,5.628 0.776,11.076 2.198,16.259 L 87.091,18.672 C 66.687,-6.959 35.231,-23.42 0,-23.42 c -26.243,0 -50.388,9.137 -69.436,24.388 l -44.024,-38.046 c 10.859,-14.093 17.34,-31.725 17.34,-50.852 0,-46.042 -37.453,-83.5 -83.49,-83.5 -46.042,0 -83.5,37.458 -83.5,83.5 0,46.036 37.458,83.49 83.5,83.49 16.012,0 30.98,-4.54 43.702,-12.388 l 45.751,39.538 c -13.281,18.326 -21.123,40.838 -21.123,65.15 0,27.971 10.377,53.562 27.478,73.133 l -30.6,39.04 c -10.397,-5.508 -22.236,-8.643 -34.798,-8.643 -41.129,0 -74.59,33.461 -74.59,74.59 0,41.129 33.461,74.59 74.59,74.59 41.129,0 74.59,-33.461 74.59,-74.59 0,-17.745 -6.24,-34.055 -16.625,-46.873 l 30.054,-38.343 c 17.567,11.607 38.596,18.376 61.181,18.376 61.359,0 111.279,-49.92 111.279,-111.28 0,-15.382 -3.138,-30.045 -8.806,-43.383 z"
+                        id="path2209"
+                      />
+                    </g>
+                    <g id="g2215" transform="translate(3521.08,4502.59)">
+                      <path
+                        d="M 0,57.45 C -15.842,57.45 -28.73,44.562 -28.73,28.72 -28.73,12.884 -15.842,0 0,0 15.836,0 28.72,12.884 28.72,28.72 28.72,44.562 15.836,57.45 0,57.45 M 0,-30 c -32.384,0 -58.73,26.342 -58.73,58.72 0,32.384 26.346,58.73 58.73,58.73 32.378,0 58.72,-26.346 58.72,-58.73 C 58.72,-3.658 32.378,-30 0,-30"
+                        id="path2213"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
 
-              <div>
-                <span>Native: </span>Full integration with your existing systems
+              <div className="flex flex-col space-y-2">
+                <div className="text-2xl">Seamless Integration</div>
+                <div className="text-md text-secondary w-3/4">
+                  Integration with your e-commerce and CRM. Connect 1C, Horizon
+                  or Sap
+                </div>
               </div>
             </div>
-            <div className="text-xl font-semibold flex space-x-2 items-center">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>User-friendly interface</title>
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                  fill="#04BF55"
-                />
-              </svg>
 
-              <div>Trusted: Proven technology with track record</div>
+            <div className=" flex flex-row space-x-6 items-center  ">
+              <div className=" from-violet-500 to-orange-700 bg-gradient-to-br  p-3 rounded-md">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1"
+                  stroke="white"
+                  className="w-14 h-14"
+                >
+                  <title>Artificial Intelligence</title>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                  />
+                </svg>
+              </div>
+
+              <div className="flex flex-col space-y-2">
+                <div className="text-2xl font-semibold">
+                  Artificial Intelligence
+                </div>
+                <div className="text-md text-secondary w-3/4">
+                  Automate your business processes and stay ahead of competition
+                  with our AI solutions
+                </div>
+              </div>
+            </div>
+
+             <div className=" flex flex-row space-x-6 items-center  ">
+              <div className=" from-cyan-500 to-blue-700 bg-gradient-to-br  p-3 rounded-md">
+               <svg fill="white" className="h-14 w-14"    stroke-width="0.5" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" >
+    <title>tools-line</title>
+    <path d="M20,14H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V15A1,1,0,0,0,20,14Zm-.4,6.6H16.4V15.4h3.2Z" /><path d="M33.71,12.38,29.62,8.29A1,1,0,0,0,28.92,8h-5V6.05A2,2,0,0,0,22,4H13.84A1.92,1.92,0,0,0,12,6.05V8H7.08a1,1,0,0,0-.71.29L2.29,12.38a1,1,0,0,0-.29.71V28a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V13.08A1,1,0,0,0,33.71,12.38ZM14,6h8V8H14ZM32,17H22v1.93H32V28H4V18.93H14V17H4V13.5L7.5,10h21L32,13.5Z" />
+    <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+</svg>
+              </div>
+
+              <div className="flex flex-col space-y-2">
+                <div className="text-2xl font-semibold">
+                  Fully Customized
+                </div>
+                <div className="text-md text-secondary w-3/4">
+                  Automate your business processes and stay ahead of competition
+                  with our AI solutions
+                </div>
+              </div>
             </div>
 
           </div>
-          <div className="flex items-center">
-            <Link to="/features"><button className="btn btn-pill  btn-outline-default" type="button">See all 100+ features</button></Link>
+          <div className="flex items-center justify-center  w-1/3 mx-auto">
+            <Link to="/features">
+              <button
+                className="btn btn-pill btn-lg  btn-outline-default"
+                type="button"
+              >
+                See all features
+              </button>
+            </Link>
           </div>
         </div>
-        
-
       </div>
 
       <div className="py-20 ">
@@ -229,10 +258,12 @@ export default function IndexLayout({ children }: LayoutProps) {
 
       <div className="bg-gradient-to-b dark:from-neutral-900/50 dark:to-neutral-900/10  flex space-x-8 from-neutral-300 to-neutral-100 flex-col   md:px-10 px-4 py-14">
         <div className="text-center mb-8 text-4xl font-bold">
-          Your new market is here
+          Sell with Confidence
         </div>
 
-        <div className=" flex space-x-8 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10  md:px-10 px-4  shrink py-14">
+        <div className="relative flex space-x-8 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10  md:px-10 px-4  shrink py-14">
+          
+
           <div className="flex space-y-4 flex-col p-6  rounded ">
             <svg
               fill="currentColor"
@@ -264,7 +295,7 @@ export default function IndexLayout({ children }: LayoutProps) {
               viewBox="0 -6.68 110 110"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>Grow sales</title>
+              <title>Grow Revenue</title>
               <path
                 id="briefcase"
                 d="M1193.707,358.954c1.2,1.5,1.77,3.648,2.408,5.715.06,2.953-.282,6.3.6,8.424,1.317.42,3.4-.207,5.114-.3h11.734c2.641-.47,6.468-.505,8.727.3.818.886,2.066,1.341,2.4,2.709.932.676.867,2.344,1.505,3.308.371,2.936,1.251,5.368,1.8,8.123q.35,10.637,1.507,20.458c-.154,1.756,1.362,1.847.9,3.91a4.692,4.692,0,0,1-2.408,1.807c-.04.656-.756.643-1.5.6-.292.307-.593.61-.9.9-.777,4.242.506,8.88.3,13.537.106,4.6-.272,9.7.3,13.839-.287,2.918-.786,5.631-1.2,8.422-1.676,1.434-4.628,1.589-7.221,2.108-21.9.239-42.723-.6-64.079-.9a87.837,87.837,0,0,0-11.435,2.105,20.826,20.826,0,0,0-4.511.3c-3.534-.779-9.019.4-12.033-.9-1.364-1.619-.637-4.323-.3-6.617.325-8.383-1.093-17.078.3-24.672-.1-1.1-1.03-1.376-1.809-1.8-.877-.22-1.29-.912-1.8-1.5-.525-4.771.266-9.056-.906-13.238v-6.919c-1.157-5.332-.611-11.909-.3-18.051a15.257,15.257,0,0,1,4.814-4.813c1.965-.742,4.489-.925,6.616-1.5,5.36-.41,10.651.734,15.347,0,.366-1.375-2.035.028-2.109-.906-.944.045-1.032-.768-1.2-1.5.132-2.381,3.171-2.936,5.113-1.806a24.845,24.845,0,0,1,.3-5.716c1.435-2.579,4-4.022,7.521-4.512.528-.477,1.6-.4,2.408-.6.814-.185,2.387.383,2.707-.3,1.356-.55,3.716-.1,5.113-.6,4.485.169,8.419-.207,12.637-.3C1184.4,357.486,1190.6,357.411,1193.707,358.954Zm-29.781,5.715c-2.252,1.261-6.533.487-8.725,1.807-.616.986-.162,3.046-.3,4.51,1.64.066,3.617-.207,4.815.3.579.519-.258,2.463.9,2.4.226.679,1.687.117,2.406.3,1.208.208,1.719-.288,2.71-.3,6-.212,12.02-.413,18.349-.3.5-1.1.191-3.018,1.505-3.307,1.191-.878,2.543-.408,4.212-.3.709-1.8.111-4.666-.6-6.02C1180.538,362.648,1173.172,365.382,1163.926,364.669Zm-36.4,28.279c-.436.187.031.366,0,0,1.215-.79,1.842-2.169,3.611-2.406,1.12.846.35,2.794-.6,3.31-.187,1.521-1.54,1.868-1.505,3.61.45.9.536-1.033,1.2-.9.522-.379.789-1.016,1.805-.9.93,1.555-.214,3.306-.6,4.513.536.358,2.209-.438,2.408.9-.248,1.359-.871,2.34-1.209,3.61.672.936,2.088,1.127,1.809,3.01,2-.31,2.223-2.392,4.814-2.106.105.394.53.473.6.9a11.319,11.319,0,0,1-1.2,3.009c1.206-.036,1.757-1.86,3.008-.9-.672,1.287-.641,2.082.6,2.706-.593.208-.8.8-.9,1.5,2.976-.531,3.7-3.316,6.619-3.91.881.324.976,1.433.905,2.707,1-.1,1.331-.871,2.706-.6.507,1,.771,2.235,1.808,2.706a12.48,12.48,0,0,0,3.606-.6c.777.025.318,1.285,1.508.9h2.1c.642-1.359.141-3.87.3-5.717a9.018,9.018,0,0,1,3.309-1.8c2.628-.222,4.325.49,6.922.3,3.186-.522,5.965-1.453,9.325-1.8,2.491.217,4.836.579,6.319,1.8a20.442,20.442,0,0,1,1.8,6.621c1.178-.227,1.035-1.772,2.406-1.807.486.083.518-.283.9-.3h6.018c8.044-1.481,17.166-1.885,25.268-3.309.1-7.419-1.926-12.712-1.5-20.457-.9-2.807-1.1-6.317-2.405-8.726-4.2.274-7.372-.228-11.131.3-8.756-.035-17.344.1-25.573.6-7.094.128-14.027.414-20.76.9H1156.7c-9.659,1.188-21.894-1.485-30.387,1.2v2.707c1.118.115.79-1.216,2.109-.9.512-.109.567.233.6.6,1.118.115.786-1.219,2.105-.9.947,2.081-.748,3.5-1.505,4.815C1128.893,389.708,1128.133,391.255,1127.522,392.948Zm44.527,18.954a16.81,16.81,0,0,1-5.415.6c-.332,1.877-1.793,2.619-1.805,4.815.306,1.2,1.37,1.636,2.406,2.105.719.887,1.315,1.892,2.706,2.108a67.4,67.4,0,0,0,13.54-2.708,8.713,8.713,0,0,0,.6-3.911c-.542-1.363-1.621-2.188-1.806-3.91C1178.376,410.939,1175.868,412.734,1172.049,411.9Zm-40.916,2.107c.622.906,2.1.438,1.807-1.205a1.4,1.4,0,0,1-.9-.3C1132.177,413.447,1131.227,413.3,1131.133,414.009Zm17.146-.3c1.069.223,2.025-.974.9-1.205C1149.271,413.294,1148.015,412.743,1148.279,413.708Zm-20.454.3c-.34.03-.471-.437-.6,0A.305.305,0,0,0,1127.825,414.009Zm89.652,3.006c-.386.018-.418.389-.9.3-7.952.172-14.655,1.594-21.66,2.707a24.631,24.631,0,0,0-5.717.3c-1.233,1.176-1.716,3.1-3.31,3.914-1.9,1.512-4.676,2.139-7.821,2.4-4.235-.521-7.97.321-12.035-.3a13.032,13.032,0,0,1-2.407-2.407c-.982-.621-.82-2.386-1.5-3.311a95.871,95.871,0,0,0-11.131-.3c-.951.146-1.065-.542-2.106-.3-5.825.2-12.43-.4-17.752.3a81.052,81.052,0,0,1,1.2,16.547,12.631,12.631,0,0,1,3.611.3c2.7,1.615,5.447,3.183,6.621,6.318.627,1.6.45,2.542.3,4.513,1.075.451,3-.519,4.816-.3,1.213-.789,3.565-.448,5.112-.9a32.732,32.732,0,0,0,6.316-.3h25.574c.95.146,1.063-.544,2.107-.305h6.317c1.9-.411,3.99-.621,6.016-.9,1.921-.1,3.172.629,4.816,0a15.6,15.6,0,0,0,.6-4.512c1.3-1.008,1.724-2.89,2.71-4.212,1.136-.463,1.87-1.417,2.706-1.806.511-.235,1.009-.1,1.5-.3.221-.089.587-.493.9-.6,1.459-.5,2.488-.47,3.91-.9,1.457.138,3.892.591,4.814.3-.215-2.69-.424-5.394-.6-8.125-.357-2.647.059-6.074-.9-8.123Zm-5.718,21.963c-1.235,1.774-3.054,2.961-3.007,6.018,1.918.551,4.317-.06,6.618,0,1.786.045,3.577.811,5.114,0,.763-1.646.6-4.212.6-6.619C1217.964,437.558,1214.52,438.488,1211.759,438.978Zm-79.424,6.619a13.737,13.737,0,0,0-1.2,1.5c-.581.32-1.594.207-1.205,1.5.352,1.157,2.637.371,3.915.6,1.717.215,2.684-.32,4.21-.3V445a7.408,7.408,0,0,0-5.718-3.309Z"
@@ -273,9 +304,9 @@ export default function IndexLayout({ children }: LayoutProps) {
               />
             </svg>
 
-            <div className="text-3xl font-bold">Grow your sales</div>
+            <div className="text-3xl font-bold">Grow Profit</div>
             <div className="tex-lg">
-              Proven track record of success and growth. Make Pigu is your new
+              Proven track record of rapid growth and profitability. Make Pigu is your new
               expansion strategy with no risks and lengthy development.
             </div>
           </div>
@@ -304,7 +335,13 @@ export default function IndexLayout({ children }: LayoutProps) {
         </div>
 
         <div className="flex space-x-8 h-96 flex-col md:flex-row items-center justify-center   md:px-10 px-4 shrink flex-grow flex-auto">
-          <div className="flex w-1/3 shadow   flex-col h-full p-6 rounded-lg   px-4  shrink bg-neutral-100 ">
+
+          <div
+            style={{ backgroundImage: "url('/bg-2.svg')" }}
+            className="overflow-hidden    absolute z-[-1] h-[300px] w-full bg-cover bg-center"
+          />
+
+          <div className="flex w-1/3 shadow   flex-col h-full md:p-6 p-4  rounded-lg    shrink bg-neutral-100 ">
             <div className="text-3xl font-bold mb-6">Launch fast</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
@@ -320,13 +357,13 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex  w-1/3 shadow flex-col h-full p-6 rounded-lg    md:px-10 px-4  shrink bg-neutral-100 ">
+          <div className="flex  w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink bg-neutral-100 ">
             <div className="text-3xl font-bold mb-6">Scale Smart</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
-                <li>Process 10,000+ orders with one person</li>
+                <li className="flex items-center">Process 10,000+ orders with one person</li>
                 <li>
-                  {" "}
+              
                   Auto-correction pricing beats competitors automatically
                 </li>
                 <li>Real-time sales analytics across all 4 Pigu regions</li>
@@ -335,31 +372,72 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex w-1/3 shadow  flex-col h-full p-6 rounded-lg    md:px-10 px-4  shrink bg-neutral-100 ">
-            <div className="text-3xl font-bold mb-6">Profit More</div>
+          <div className="flex w-1/3 shadow  flex-col h-full  md:p-6 p-4 rounded-lg     shrink bg-neutral-100 ">
+            <div className="text-2xl font-bold mb-6">Profit More</div>
             <div className="tex-lg">
-              <ul className="flex flex-col space-y-2 text-lg">
+              <ol className="flex flex-col space-y-2 text-lg">
                 <li>Return on investments in 6 month</li>
                 <li>Never sell at a loss with built-in profit protection</li>
                 <li>Automated accounting and extensive reporting</li>
                 <li>Custom automation tailored for your business needs.</li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="py-20">
+        <div className="text-center  text-3xl font-bold  ">Trusted by</div>
+
+        <div className="flex space-x-10 justify-center items-center px-10 py-10">
+          <div>
+            <a href="https://evelatus.com">
+              <img
+                className="h-10"
+                src={"./clients/evelatus.svg"}
+                alt="Evelatus"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://euronics.lv">
+              <img
+                className="h-10"
+                src={"./clients/euronics.svg"}
+                alt="Euronics"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://led.lv">
+              <img className="h-10" src={"./clients/led.svg"} alt="LED" />
+            </a>
+          </div>
+          <div>
+            <a href="https://mobilux.lv">
+              <img
+                className="h-10"
+                src={"./clients/mobilux.png"}
+                alt="mobilux"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div
-        style={{ backgroundImage: "url('/69604252_yakin 8.svg')" }}
-        className="  h-[500px] flex flex-col items-center justify-center bg-cover"
+       
+        className="relative  bg-gradient-to-br from-[#1B45B4]  to-[#1C2792]  h-[500px] w-full  flex flex-col items-center justify-center bg-cover"
       >
+
+    
         <div className="flex flex-col items-center  space-y-6">
           <div className="text-[50px] font-bold mb-10 text-white ">
-            Start growing your marketplace channel today{" "}
+            Start growing your marketplace channel today
           </div>
 
           <div className="flex space-x-2 ">
-            <button type="button" className="btn btn-success btn-pill ">
+            <button type="button" className="btn btn-outline-white btn-pill ">
               Request Demo
             </button>
 
