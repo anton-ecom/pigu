@@ -16,7 +16,7 @@ export default function IndexLayout({ children }: LayoutProps) {
   // Now you can use theme or setTheme here
 
   return (
-    <div className="max-w-screen-xl mx-auto flex flex-col items-stretch min-h-screen">
+    <div className="max-w-screen-2xl mx-auto flex flex-col items-stretch min-h-screen">
       <div className="flex items-center space-x-4 flex-row  justify-between md:px-10 px-4 py-4 shrink">
         <div className="space-x-3 flex items-center">
           <div><img src="icon.svg" alt="icon" alt-label="icon" className="w-12 h-12"/></div>
@@ -44,18 +44,18 @@ export default function IndexLayout({ children }: LayoutProps) {
       </div>
 
       <div
-        style={{ backgroundImage: "url('/BackgroundHero.svg')" }}
+        style={{ backgroundImage: "url('/BackgroundHeroNew.svg')" }}
         className="overflow-hidden    absolute z-[-1] h-full w-full bg-cover bg-center"
       />
 
-      <div className="relative  flex flex-col items-center h-[460px]    md:px-10 px-4  shrink ">
+      <div className="relative  flex flex-col items-center md:h-[460px] h-[500px]  md:px-10 px-2  shrink ">
         <div className="py-10 md:space-x-10 flex-col md:flex-row flex  items-center justify-between w-full">
           <div className="flex flex-col space-y-8 items-center justify-center w-full h-[500px]">
             <div className="flex space-y-8 flex-col">
-              <div className="text-[50px] font-bold mb-1 text-white">
+              <div className="md:text-[50px] text-4xl text-center font-bold mb-1 text-white">
                 Start Selling on Pigu Marketplace
               </div>
-              <div className="text-semibold text-2xl text-white">
+              <div className="text-semibold md:text-2xl text-white text-center text-lg">
                 Premium Marketplace management platform ready to boost your
                 sales
               </div>
@@ -74,14 +74,14 @@ export default function IndexLayout({ children }: LayoutProps) {
               </button>
             </div>
 
-            <div className="flex space-x-6">
+            <div className="grid md:gap-6 gap-6 md:grid-cols-1 grid-cols-2 ">
               <img
                 src={"./markets/lt.svg"}
                 className="h-8 fill-white"
                 alt="Pigu.lt"
               />
-              <img src={"./markets/lv.svg"} className="h-8" alt="Pigu.lv" />
-              <img src={"./markets/ee.svg"} className="h-8" alt="Pigu.ee" />
+              <img src={"./markets/lv.svg"} className="md:h-8 h-6" alt="Pigu.lv" />
+              <img src={"./markets/ee.svg"} className="md:h-8 h-6" alt="Pigu.ee" />
               <img
                 src={"./markets/fi.svg"}
                 className="h-8"
@@ -92,17 +92,17 @@ export default function IndexLayout({ children }: LayoutProps) {
         </div>
       </div>
 
-      <div className="flex space-x-20 flex-col  px-10 items-center ">
-        <div className="w-3/4 mb-10">
+      <div className="flex  flex-col flex-grow  md:px-10 px-4 items-center ">
+        <div className="md:w-3/4 w-full mb-10 lg:mb-20 ">
           <img
             src={`/screen_${theme}.png`}
-            className="shadow-md rounded-lg border-neutral-100"
+            className="shadow-md w-full rounded-lg border-neutral-100"
             alt="Main screen"
           />
         </div>
         <div>
-          <div className="gap-10 flex-col  grid grid-cols-2 mb-12 w-11/12 items-center justify-center  mx-auto">
-            <div className=" flex flex-row space-x-6 items-center  ">
+          <div className="md:gap-10 gap-4 flex-col  grid md:grid-cols-2 mb-12 w-full md:w-11/12 items-center  mx-auto">
+            <div className=" flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center   ">
               <div className=" from-sky-500 to-blue-700 bg-gradient-to-br  p-3 rounded-md">
                 <svg
                   className="w-14 h-14"
@@ -119,7 +119,7 @@ export default function IndexLayout({ children }: LayoutProps) {
                 </svg>
               </div>
 
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
                 <div className="text-2xl font-semibold">Complete Pigu API </div>
                 <div className="text-md text-secondary w-3/4">
                   Add products, manage orders, and update inventory all in one
@@ -127,7 +127,7 @@ export default function IndexLayout({ children }: LayoutProps) {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-row space-x-6 items-center  ">
+            <div className=" flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center   ">
               <div className=" from-emerald-500 to-emerald-700 bg-gradient-to-br  p-3 rounded-md">
                 <svg
                   className="w-14 h-14"
@@ -156,8 +156,8 @@ export default function IndexLayout({ children }: LayoutProps) {
                 </svg>
               </div>
 
-              <div className="flex flex-col space-y-2">
-                <div className="text-2xl">Seamless Integration</div>
+              <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
+                <div className="text-2xl font-semibold">Seamless Integration</div>
                 <div className="text-md text-secondary w-3/4">
                   Integration with your e-commerce and CRM. Connect 1C, Horizon
                   or Sap
@@ -165,7 +165,7 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
             </div>
 
-            <div className=" flex flex-row space-x-6 items-center  ">
+            <div className="flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center ">
               <div className=" from-violet-500 to-orange-700 bg-gradient-to-br  p-3 rounded-md">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ export default function IndexLayout({ children }: LayoutProps) {
                 </svg>
               </div>
 
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
                 <div className="text-2xl font-semibold">
                   Artificial Intelligence
                 </div>
@@ -195,7 +195,7 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
             </div>
 
-             <div className=" flex flex-row space-x-6 items-center  ">
+             <div className=" flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center">
               <div className=" from-cyan-500 to-blue-700 bg-gradient-to-br  p-3 rounded-md">
                <svg fill="white" className="h-14 w-14"    stroke-width="0.5" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" >
     <title>tools-line</title>
@@ -204,7 +204,7 @@ export default function IndexLayout({ children }: LayoutProps) {
 </svg>
               </div>
 
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
                 <div className="text-2xl font-semibold">
                   Fully Customized
                 </div>
@@ -236,20 +236,20 @@ export default function IndexLayout({ children }: LayoutProps) {
 
         <div
           style={{ backgroundImage: "url('/bg-module.jpg')" }}
-          className="  rounded-2xl  bg-neutral-900 bg-center space-x-8  flex items-center bg-cover mx-20 px-20 justify-center h-48 py-10 shadow-xl"
+          className="  rounded-2xl  bg-neutral-900 bg-center  flex items-center bg-cover mx-20 px-20 justify-center md:h-48 py-10 shadow-xl"
         >
-          <div className="px-10  flex space-x-10  items-center justify-center">
-            <div className="w-72  space-y-4  ">
+          <div className="px-10  flex md:space-x-10 space-y-20 md:space-y-0  items-center justify-center  md:flex-row flex-col ">
+            <div className="w-72  space-y-4  flex items-center flex-col">
               <div className="text-neutral-300 text-lg">Shops connected</div>
               <div className="text-[50px] font-bold text-white ">10+</div>
             </div>
 
-            <div className="w-72  space-y-4">
+            <div className="w-72  space-y-4 flex items-center flex-col">
               <div className="text-neutral-300 text-lg">Total Revenue</div>
               <div className="text-[50px] font-bold text-white">10M+</div>
             </div>
 
-            <div className="w-72  space-y-4">
+            <div className="w-72  space-y-4 flex items-center flex-col">
               <div className="text-neutral-300 text-lg">Orders Served</div>
               <div className="text-[50px] font-bold text-white">50k+</div>
             </div>
@@ -257,15 +257,15 @@ export default function IndexLayout({ children }: LayoutProps) {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b dark:from-neutral-900/50 dark:to-neutral-900/10  flex space-x-8 from-neutral-300 to-neutral-100 flex-col   md:px-10 px-4 py-14">
+      <div className="bg-gradient-to-b dark:from-neutral-900/50 dark:to-neutral-900/10  flex md:space-x-8 from-neutral-300 to-neutral-100 flex-col  md:px-10 px-4 py-14">
         <div className="text-center mb-8 text-4xl font-bold">
           Sell with Confidence
         </div>
 
-        <div className="relative flex space-x-8 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10   py-14">
+        <div className="relative flex md:space-x-8 space-x-0 space-y-8 md:space-y-0 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10   py-14">
       
 
-          <div className="flex space-y-4 flex-col p-6  rounded ">
+          <div className="flex space-y-4 items-center md:items-start flex-col p-6  rounded ">
             <svg
               fill="currentColor"
               className="w-24 h-24"
@@ -289,7 +289,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex space-y-4 flex-col p-6  rounded">
+          <div className="flex space-y-4 flex-col p-6  rounded items-center md:items-start">
             <svg
               className="w-24 h-24"
               fill="currentColor"
@@ -312,7 +312,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex space-y-4 flex-col p-6  rounded ">
+          <div className="flex space-y-4 flex-col p-6   items-center md:items-start">
             <svg
               fill="currentColor"
               className="w-24 h-24"
@@ -335,11 +335,11 @@ export default function IndexLayout({ children }: LayoutProps) {
           </div>
         </div>
 
-        <div className="flex space-x-8 h-96 flex-col md:flex-row items-center justify-center   md:px-10 px-4 shrink flex-grow flex-auto">
+        <div className="flex md:space-x-8 md:h-96 space-y-10 md:space-y-0 flex-col md:flex-row items-center justify-center   md:px-10 px-4 shrink flex-grow flex-auto">
 
       
 
-          <div className="flex w-1/3 bg-white dark:bg-transparent shadow border dark:border-neutral-800   flex-col h-full md:p-6 p-4  rounded-lg    shrink  ">
+          <div className="flex md:w-1/3 bg-white dark:bg-transparent shadow border dark:border-neutral-800   flex-col h-full md:p-6 p-4  rounded-lg    shrink  ">
             <div className="text-2xl font-semibold mb-6">Launch fast</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
@@ -355,7 +355,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex border  dark:border-neutral-800 w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink bg-white dark:bg-transparent ">
+          <div className="flex border  dark:border-neutral-800 md:w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink bg-white dark:bg-transparent ">
             <div className="text-2xl font-semibold mb-6">Scale Smart</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
@@ -370,7 +370,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex bg-white dark:bg-transparent w-1/3 shadow border dark:border-neutral-800  flex-col h-full  md:p-6 p-4 rounded-lg     shrink  ">
+          <div className="flex bg-white dark:bg-transparent md:w-1/3 shadow border dark:border-neutral-800  flex-col h-full  md:p-6 p-4 rounded-lg     shrink  ">
             <div className="text-2xl font-semibold mb-6">Profit More</div>
             <div className="tex-lg">
               <ol className="flex flex-col space-y-2 text-lg">
@@ -387,7 +387,7 @@ export default function IndexLayout({ children }: LayoutProps) {
       <div className="py-20">
         <div className="text-center  text-3xl font-bold  ">Trusted by</div>
 
-        <div className="flex space-x-10 justify-center items-center px-10 py-10">
+        <div className="flex md:space-x-10 md:flex-row flex-col space-y-6 md:space-y-0 justify-center items-center px-10 py-10">
           <div>
             <a href="https://evelatus.com">
               <img
@@ -425,17 +425,17 @@ export default function IndexLayout({ children }: LayoutProps) {
 
       <div
        
-        className="relative  bg-gradient-to-br from-[#1B45B4]  to-[#1C2792]  h-[500px] w-full  flex flex-col items-center justify-center bg-cover"
+        className="relative  bg-gradient-to-br from-[#1B45B4]  to-[#1C2792]  h-[500px] w-full  flex flex-col items-center justify-center bg-cover px-4"
       >
 
     
         <div className="flex flex-col items-center  space-y-6">
-          <div className="text-[50px] font-bold mb-10 text-white ">
+          <div className="md:text-[50px] font-bold mb-10 text-white text-4xl text-center ">
             Start growing your marketplace channel today
           </div>
 
-          <div className="flex space-x-2 ">
-            <button type="button" className="btn btn-outline-white btn-pill ">
+          <div className="flex md:flex-row flex-col md:space-x-2 space-y-4 md:space-y-0 w-full md:justify-center">
+            <button type="button" className="btn btn-outline-white btn-pill w-full md:w-auto">
               Request Demo
             </button>
 
