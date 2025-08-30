@@ -261,8 +261,8 @@ export default function IndexLayout({ children }: LayoutProps) {
           Sell with Confidence
         </div>
 
-        <div className="relative flex space-x-8 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10  md:px-10 px-4  shrink py-14">
-          
+        <div className="relative flex space-x-8 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10   py-14">
+      
 
           <div className="flex space-y-4 flex-col p-6  rounded ">
             <svg
@@ -336,12 +336,9 @@ export default function IndexLayout({ children }: LayoutProps) {
 
         <div className="flex space-x-8 h-96 flex-col md:flex-row items-center justify-center   md:px-10 px-4 shrink flex-grow flex-auto">
 
-          <div
-            style={{ backgroundImage: "url('/bg-2.svg')" }}
-            className="overflow-hidden    absolute z-[-1] h-[300px] w-full bg-cover bg-center"
-          />
+      
 
-          <div className="flex w-1/3 shadow   flex-col h-full md:p-6 p-4  rounded-lg    shrink bg-neutral-100 ">
+          <div className="flex w-1/3 shadow border dark:border-neutral-800   flex-col h-full md:p-6 p-4  rounded-lg    shrink  ">
             <div className="text-3xl font-bold mb-6">Launch fast</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
@@ -357,7 +354,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex  w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink bg-neutral-100 ">
+          <div className="flex border mt-20 dark:border-neutral-800 w-1/3 shadow flex-col h-full md:p-6 p-4 rounded-lg   shrink  ">
             <div className="text-3xl font-bold mb-6">Scale Smart</div>
             <div className="tex-lg">
               <ul className="flex flex-col space-y-2 text-lg">
@@ -372,7 +369,7 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="flex w-1/3 shadow  flex-col h-full  md:p-6 p-4 rounded-lg     shrink bg-neutral-100 ">
+          <div className="flex mt-40 w-1/3 shadow border dark:border-neutral-800  flex-col h-full  md:p-6 p-4 rounded-lg     shrink  ">
             <div className="text-2xl font-bold mb-6">Profit More</div>
             <div className="tex-lg">
               <ol className="flex flex-col space-y-2 text-lg">
