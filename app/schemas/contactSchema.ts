@@ -6,6 +6,7 @@ export const ContactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Valid email required"),
   text: z.string().min(5, "Tell us why you're here"),
+  subject: z.string().min(5, "Please choose subject"),
   turnstileToken: z.string().min(1, "Turnstile verification is required"),
 });
 

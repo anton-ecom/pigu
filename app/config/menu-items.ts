@@ -7,12 +7,18 @@ export const menuItems = [
 
   {
     id: 2,
-    name: "subscribe",
-    url: "/subscribe",
+    name: "features",
+    url: "/features",
   },
 
   {
     id: 3,
+    name: "pricing",
+    url: "/pricing",
+  },
+
+  {
+    id: 4,
     name: "about",
     url: "/info/about",
   },

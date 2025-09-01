@@ -1,4 +1,4 @@
-subject: Your signal is received
+subject: We've received your message
 
 ---
 
@@ -7,7 +7,8 @@ subject: Your signal is received
 Hello **{{name}}**,
 
 Your message has been received.
-We appreciate you reaching out. We will follow up if your signal requires a response.
+We appreciate you reaching out. We will contact you shortly.
 
 Yours,
-zAItgeist
+Pigu.shop
+Ecom Europe Limited

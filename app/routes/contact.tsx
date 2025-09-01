@@ -34,6 +34,7 @@ export async function action({ request }: { request: Request }) {
     name: formData.get("name"),
     email: formData.get("email"),
     text: formData.get("text"),
+    subject: formData.get("subject"),
     turnstileToken: formData.get("cf-turnstile-response"),
   };
 
@@ -106,11 +107,11 @@ export async function action({ request }: { request: Request }) {
     );
   }
 
-  const { name, email, text } = parsed.data;
+  const { name, email, text, subject } = parsed.data;
 
   try {
     await db.contacts.create({
-      data: { name, email, text },
+      data: { name, email, text, subject },
     });
 
     await Promise.all([
@@ -119,6 +120,7 @@ export async function action({ request }: { request: Request }) {
         template: "contact",
         data: {
           name,
+          subject,
           email,
           text,
         },
@@ -129,6 +131,7 @@ export async function action({ request }: { request: Request }) {
         template: "contact-confirm",
         data: {
           name,
+          subject,
           email,
           text,
         },
@@ -226,6 +229,15 @@ export default function Component() {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
 
+  const subjects: Record<string, string> = {
+
+      'General Inquiry': 'general',
+      'Schedule a demo': 'technical',
+      'Billing': 'billing',
+      'Feedback': 'feedback',
+  }
+
+
   /*
    // Function to reset Turnstile when needed
   const resetTurnstile = () => {
@@ -284,6 +296,37 @@ export default function Component() {
                 </p>
               )}
             </div>
+
+             <div className="flex space-y-1 flex-col">
+              <label htmlFor="email" className="block font-medium form-label">
+                Subject
+              </label>
+
+            {Object.entries(subjects).map(([name, id]) => (
+              <div key={id} className="flex items-center justify-start space-x-4">
+                <input
+                  id={`topic-${id}`}
+                  type="radio"
+                  className="w-4 h-4"
+                  name="subject"
+                  value={name}
+                />
+                <label
+                  htmlFor={`topic-${id}`}
+                  className="text-lg text-gray-900 cursor-pointer rounded- hover:underline hover:text-blue-500 dark:text-gray-300"
+                >
+                  {name}
+                </label>
+              </div>
+            ))}
+
+            {actionData?.errors?.subject && (
+                <p className="text-red-500 text-sm">
+                  {actionData.errors.subject[0]}
+                </p>
+              )}
+             </div> 
+          
             <div className="flex space-y-1 flex-col  ">
               <label htmlFor="text" className="block font-medium form-label">
                 Message
