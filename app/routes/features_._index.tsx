@@ -7,13 +7,10 @@ import {
 } from "react-router";
 import { ErrorMessage } from "@core/components/ErrorMessage";
 import IndexLayout from "~/components/IndexLayout";
-import DocumentView from "~/components/DocumentView";
 import { Features } from "~/components/Features";
 
-export const meta: Route.MetaFunction = ({ data }) => {
-  if (!data) {
-    return [{ title: "Loading..." }];
-  }
+export const meta: Route.MetaFunction = () => {
+  
   return [{ title: 'Features' }];
 };
 
