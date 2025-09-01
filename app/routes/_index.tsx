@@ -10,7 +10,6 @@ import Layout from "~/components/HomeLayout";
 import { getMarkdownFiles } from "~/utils/file-utils";
 import { marked } from "marked";
 import { cacheHeader } from "pretty-cache-header";
-import { EntriesList } from "~/components/Entries";
 import { ErrorMessage } from "@core/components/ErrorMessage";
 import IndexLayout from "~/components/IndexLayout";
 

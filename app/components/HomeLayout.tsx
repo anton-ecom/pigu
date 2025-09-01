@@ -41,17 +41,12 @@ export default function IndexLayout({ children }: LayoutProps) {
             </div>
 
             <div className="flex space-x-4 mb-8">
-              <button type="button" className="btn btn-black btn-pill btn-lg">
-                Schedule Demo
-              </button>
+               <Link to="/features" className="btn btn-black btn-pill btn-lg"> 
+                Request Demo           
+              </Link>
 
-              <Link to="/features">
-                <button
-                  type="button"
-                  className="btn  btn-outline-white btn-pill btn-lg"
-                >
-                  Features
-                </button>
+              <Link to="/features" className="btn  btn-outline-white btn-pill btn-lg">
+                  Features          
               </Link>
             </div>
 
