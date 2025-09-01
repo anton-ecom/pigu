@@ -18,6 +18,7 @@ export interface PricingPlan {
   features: PricingFeature[];
   highlighted?: boolean;
   cta: string;
+  url: string;
 }
 
 export interface PricingData {
