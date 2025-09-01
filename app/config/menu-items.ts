@@ -1,25 +1,26 @@
 export const menuItems = [
-  {
-    id: 1,
-    name: "contact",
-    url: "/contact",
-  },
 
   {
     id: 2,
-    name: "features",
+    name: "Features",
     url: "/features",
   },
 
   {
     id: 3,
-    name: "pricing",
+    name: "Pricing",
     url: "/pricing",
   },
 
   {
     id: 4,
-    name: "about",
+    name: "About",
     url: "/info/about",
+  },
+
+  {
+    id: 5,
+    name: "Contact us",
+    url: "/contact",
   },
 ];
