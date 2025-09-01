@@ -6,13 +6,12 @@ export interface FeatureProps {
   header?: string;
   subheader?: string;
   features: string[];
-  image: string;
+  image?: string;
 }
 
 export function FeatureBlock({header, subheader, features, image}: FeatureProps) {
 
   const theme = useTheme();
-
 
   return (
 

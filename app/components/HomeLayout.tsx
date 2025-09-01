@@ -240,14 +240,26 @@ export default function IndexLayout({ children }: LayoutProps) {
       </div>
 
       <div className="bg-gradient-to-b dark:from-neutral-900/50 dark:to-neutral-900/10  flex md:space-x-8 border-t  flex-col  md:px-10 px-4 py-14">
-        <div className="text-center mb-8 text-4xl font-bold">
-          Sell with Confidence
+        
+        <div className="text-center mb-8 text-4xl font-bold ">
+         
         </div>
 
-        <div className="flex md:space-x-8 space-x-0 space-y-8 md:space-y-0 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10   py-14">
-      
+     
+        <div className="flex flex-col space-y-2 mb-16 items-centers justify-center">
+            <div className="text-center  text-4xl font-bold ">
+            Sell with Confidence
+            </div>
+            <div className="text-secondary text-center">
+                 The only all-inclusive platform on the market with proven record of success. 
+            </div>
+        </div>     
 
-          <div className="flex space-y-4 items-center md:items-start flex-col p-6  rounded ">
+        <div className="flex flex-col md:space-x-8 space-x-0 space-y-8 md:space-y-0 from-neutral-300 to-neutral-100  md:flex-row items-center justify-center   mb-10 ">
+      
+        <div className="grow flex space-y-4 flex-col p-6   items-center md:items-start">
+         
+           <div className=" border from-[#1B45B4] text-white  to-[#1C2792]  bg-gradient-to-b rounded-lg h-64 w-full flex flex-col items-start p-6 justify-end">
             <svg
               fill="currentColor"
               className="w-24 h-24"
@@ -262,17 +274,20 @@ export default function IndexLayout({ children }: LayoutProps) {
                 fill-rule="evenodd"
               />
             </svg>
-
+          </div>
+          <div className="flex flex-col justify-center md:justify-start">
             <div className="text-2xl font-semibold">Expand to new markets</div>
             <div className="tex-lg">
               Create powerful distribution channel in 4 countries in just a
               week. We offer training and consultation on any Pigu distribution
               questions.
             </div>
+           </div> 
           </div>
 
-          <div className="flex space-y-4 flex-col p-6  rounded items-center md:items-start">
-            <svg
+          <div className=" grow flex space-y-4 flex-col p-6  rounded items-center md:items-start">
+            <div className="border from-[#1B45B4] text-white  to-[#1C2792]  bg-gradient-to-b rounded-lg h-64 w-full flex flex-col items-start p-6 justify-end">
+           <svg
               className="w-24 h-24"
               fill="currentColor"
               viewBox="0 -6.68 110 110"
@@ -287,14 +302,19 @@ export default function IndexLayout({ children }: LayoutProps) {
               />
             </svg>
 
-            <div className="text-2xl font-semibold">Grow Revenue</div>
-            <div className="tex-lg">
+            </div>
+            <div className="flex flex-col justify-center md:justify-start">
+            <div className="text-2xl font-semibold">New Revenue Stream</div>
+            <div className="tex-lg text-secondary">
               Proven track record of rapid growth and profitability. Make Pigu is your new
               expansion strategy with no risks and lengthy development.
             </div>
+            </div>
           </div>
 
-          <div className="flex space-y-4 flex-col p-6   items-center md:items-start">
+          <div className=" grow flex space-y-4 flex-col p-6   items-center md:items-start">
+              <div className="border from-[#1B45B4] text-white  to-[#1C2792]  bg-gradient-to-b rounded-lg h-64 w-full flex flex-col items-start p-6 justify-end">
+          
             <svg
               fill="currentColor"
               className="w-24 h-24"
@@ -309,13 +329,28 @@ export default function IndexLayout({ children }: LayoutProps) {
               />
             </svg>
 
+            </div>
+            <div className="flex flex-col justify-center md:justify-start">
             <div className="text-2xl font-semibold">Automate everything</div>
             <div className="tex-lg">
               No additional resources needed. Simple order management, full ERP
               integration, automatic price correction.{" "}
             </div>
+            </div>
           </div>
         </div>
+        </div>
+
+        <div className="flex flex-col md:px-10 px-4">
+
+        <div className="flex flex-col space-y-2 mb-16 items-centers justify-center">
+            <div className="text-center  text-4xl font-bold ">
+            Win with Pigu
+            </div>
+            <div className="text-secondary text-center">
+              Marketplace era is here. Stay on top of the game. Launch fast, scale smart and take the market share, 
+            </div>
+        </div>        
 
         <div className="flex md:space-x-8 md:h-96 space-y-10 md:space-y-0 flex-col md:flex-row items-center justify-center   px-4 shrink flex-grow flex-auto">
       
@@ -351,7 +386,7 @@ export default function IndexLayout({ children }: LayoutProps) {
           </div>
 
           <div className="flex bg-white dark:bg-transparent md:w-1/3 shadow border dark:border-neutral-800  flex-col h-full  md:p-6 p-4 rounded-lg     shrink  ">
-            <div className="text-2xl font-semibold mb-6">Profit More</div>
+            <div className="text-2xl font-semibold mb-6">Grow fast</div>
             <div className="tex-lg">
               <ol className="flex flex-col space-y-2 text-lg">
                 <li>Return on investments in 6 month</li>
@@ -363,6 +398,7 @@ export default function IndexLayout({ children }: LayoutProps) {
           </div>
         </div>
       </div>
+    
 
       <div className="py-20">
         <div className="text-center  text-3xl font-bold  ">Trusted by</div>

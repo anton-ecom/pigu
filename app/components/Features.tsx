@@ -4,7 +4,7 @@ import { useTheme } from "./ThemeContext";
 import {OrdersFeature} from "./features/OrdersFeature";
 
 import {FeatureBlock, type FeatureProps} from "./features/FeatureBlock";
-
+import {FeatureSmall } from "./features/FeatureSmall";
 
 export function Features() {
 
@@ -51,8 +51,78 @@ export function Features() {
     image: "auto"
   }
 
+    const stats :FeatureProps = {
+    header: "Sales Statistics",
+    subheader: "Gain valuable insights into your sales performance.",
+    features: [
+      "Comprehensive sales reports",
+      "Real-time performance tracking",
+      "Customizable dashboards",
+      "In-depth product analytics",
+    ],
+    image: "stats"
+    }
 
 
+    const products :FeatureProps = {
+    header: "Product management",
+    subheader: "Gain valuable insights into your sales performance.",
+    features: [
+      "Upload and manage products with ease",
+      "Publish Pigu products in one click",
+      "Full product specifications",
+      "AI integration for content translation.",
+    ]
+    }
+
+
+     const invoices :FeatureProps = {
+    header: "Invoices processing",
+    subheader: "No more manual invoices and accounting. Full invoice integration  with automatic upload to your accounting software.",
+    features: [
+      "Download all invoices in PDF",
+      "All invoices parsed to structured data",
+      "API for invoice upload to your CRM/ERP",
+
+    ]
+  }
+
+    const fees :FeatureProps = {
+    header: " Fees control",
+    subheader: "Never sell an item with loss. See full fees calculation and profit margins for every price for every region.",
+    features: [
+      "Automatic profit margin calculationsF",
+      "Factual profit reports",
+      "See your margin in every offer and product",
+
+    ]
+   }
+
+    const ai :FeatureProps = {
+    header: "AI-Powered Insights",
+    subheader: "Leverage the power of AI to gain insights and optimize your pricing strategy.",
+    features: [
+      "Smart 1-click product description AI-translation",
+      "Analyze competition and price change patterns with our AI-analytics agent",
+      "Fill required product specifications from description with AI auto-detect feature.",
+
+    ]
+   }
+
+   const customization :FeatureProps = {
+    header: "Full Customization",
+    subheader: "Each business is unique. We develop fully customized features, tailored to your needs",
+    features: [
+      "Individual approach",
+      "Consultation and strategy",
+      "Deeper automation works",
+      "New features delivered fast",
+      "Customer and technical support contracts available."
+
+    ]
+   }
+   
+   
   return (
 
     <div>
@@ -75,6 +145,18 @@ export function Features() {
       <FeatureBlock {...orders} />
       <FeatureBlock {...offers} />
       <FeatureBlock {...auto} />
+      <FeatureBlock {...stats} />
+
+      <div className="py-6 font-semibold text-center"> And more than 100+ features </div>
+
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
+      <FeatureSmall {...products} />
+      <FeatureSmall {...invoices} />
+      <FeatureSmall {...fees} />
+      <FeatureSmall {...ai} />
+      <FeatureSmall {...customization} />
+
+      </div>
 
     </div>
 
