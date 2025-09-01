@@ -124,7 +124,8 @@ a:visited {
 .prose {
   &.prose-custom {
     @apply prose-a:no-underline   dark:prose-a:text-[#54c6fb] 
-        dark:prose-li:text-neutral-200 
+        dark:text-white text-black 
+        dark:prose-li:text-white
         dark:prose-li:marker:font-semibold
         prose-li:marker:text-[#54c6fb] prose-li:marker:font-normal 
         prose-p:text-foreground
@@ -135,7 +136,7 @@ a:visited {
         prose-blockquote:font-light     
         prose-li:list-inside
         prose-ol:list-inside
-        prose-hr:text-neutral-400
+        prose-hr:text-black
 
         prose-ol:ml-0 
         prose-ol:pl-0 

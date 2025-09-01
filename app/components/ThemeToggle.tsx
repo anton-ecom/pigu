@@ -1,7 +1,8 @@
 // ThemeSwitch.tsx
 import { useTheme } from "~/components/ThemeContext";
 import { Sun, Moon } from "lucide-react";
-export default function ThemeToggle() {
+
+export default function ThemeToggle({ textClass }: { textClass?: string }) {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
@@ -15,7 +16,7 @@ export default function ThemeToggle() {
       <button
         type="button"
         onClick={toggleTheme}
-        className="text-xs font-mono  px-2 py-1 rounded dark:hover:bg-neutral-800 transition hover:bg-neutral-100"
+        className={`text-xs font-mono  px-2 py-1 rounded transition ${textClass} dark:hover:bg-neutral-900/10 hover:bg-neutral-100/25`}
       >
         {theme === "light" ? (
           <Sun className="size-5" />

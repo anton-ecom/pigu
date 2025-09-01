@@ -55,11 +55,7 @@ export default function Index() {
   return (
     <Layout>
       <div className="mb-10">
-        <div className="flex md:space-x-2 flex-col md:flex-row md:space-y-0 space-y-4">
-          <div className="flex flex-col space-y-4 py-10">
-           
-          </div>
-        </div>
+        
       </div>
     </Layout>
   );
