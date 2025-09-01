@@ -8,32 +8,9 @@ html {
   @apply text-base;
 }
 
-.bracket-link {
-  @apply flex;
-}
+
 /* Target links with a specific class, e.g., "bracket-link" */
-.bracket-link::before {
-  content: "[";
-}
 
-.bracket-link::after {
-  content: "]";
-}
-
-.text-green {
-  @apply dark:text-[#AFAAA4] text-[#605d59];
-}
-
-a {
-  @apply dark:text-[#e3dbd1] text-[#5c5a56];
-}
-
-a:hover {
-  @apply underline dark:text-[#AFAAA4] text-[#605d59];
-}
-a:visited {
-  @apply dark:text-[#AFAAA4] text-[#605d59];
-}
 .markdown {
   @apply text-foreground;
 

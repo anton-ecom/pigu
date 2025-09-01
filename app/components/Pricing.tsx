@@ -1,9 +1,5 @@
 import { Link } from "react-router";
-import { Feature } from "./Feature";
 import { useTheme } from "./ThemeContext";
-import { OrdersFeature } from "./features/OrdersFeature";
-import { FeatureBlock, type FeatureProps } from "./features/FeatureBlock";
-import { FeatureSmall } from "./features/FeatureSmall";
 import type { PricingData, PricingPlan, PricingFeature } from "~/domain/types/pricing";
 import { useState } from "react";
 
