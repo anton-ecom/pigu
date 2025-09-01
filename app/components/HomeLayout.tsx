@@ -73,6 +73,8 @@ export default function IndexLayout({ children }: LayoutProps) {
       </div>
 
       <div className="flex  flex-col flex-grow  md:px-10 px-4 items-center ">
+        
+        
         <div className="md:w-3/4 w-full mb-10 lg:mb-20 ">
           <img
             src={`/screen_${theme}.png`}
@@ -80,38 +82,28 @@ export default function IndexLayout({ children }: LayoutProps) {
             alt="Main screen"
           />
         </div>
-        <div>
-          <div className="md:gap-10 gap-4 flex-col  grid md:grid-cols-2 mb-12 w-full md:w-11/12 items-center  mx-auto">
-            <div className=" flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center   ">
-              <div className=" from-sky-500 to-blue-700 bg-gradient-to-br  p-3 rounded-md">
-                <svg
-                  className="w-14 h-14"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Pigu API</title>
-                  <rect width="24" height="24" fill="transparent" />
-                  <path
-                    d="M20,6H4A2,2,0,0,0,2,8v8a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V8A2,2,0,0,0,20,6ZM9.29,14.8,9,13.73H7.16L6.87,14.8H5.17L7,9.07H9.09L11,14.8Zm6.34-3.14a1.7,1.7,0,0,1-.36.64,1.82,1.82,0,0,1-.67.44,2.75,2.75,0,0,1-1,.17h-.44V14.8H11.6V9.09h2a2.43,2.43,0,0,1,1.62.47,1.67,1.67,0,0,1,.55,1.35A2.36,2.36,0,0,1,15.63,11.66Zm2.58,3.14H16.66V9.09h1.55ZM8.45,11.53l.24.93H7.48l.24-.93c0-.13.08-.28.12-.47s.09-.38.13-.57a4.63,4.63,0,0,0,.1-.48c0,.13.07.29.11.5l.15.58Zm5.59-1a.57.57,0,0,1,.16.43.75.75,0,0,1-.11.42.59.59,0,0,1-.27.22.9.9,0,0,1-.37.07h-.31V10.34h.4A.63.63,0,0,1,14,10.51Z"
-                    fill="#fff"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+        
+        
+        <div className="grow md:px-20 ">
+          <div className="md:gap-10 gap-8 flex-col  grid md:grid-cols-2 mb-12 w-full items-center">
+            <div className=" flex flex-col md:justifystart justify-center space-y-4  md:items-start items-center   ">
+              <div className="text-[#1B45B4] dark:text-blue-500">
+                    <svg className="md:w-14 md:h-14 w-16 h-16" viewBox="0 0 1024 1024"  version="1.1" xmlns="http://www.w3.org/2000/svg"><title>API</title><path d="M432.4 453.5l-17 46.7h34.4z" fill="transparent" /><path d="M725.3 259.7H312.2c-16.5 0-30 13.5-30 30v413.1c0 16.5 13.5 30 30 30h413.1c16.5 0 30-13.5 30-30V289.7c0-16.6-13.5-30-30-30z m-98.8 164.5h25.4V550h-25.4V424.2z m-116.5 0h40.8c15.5 0 25.5 0.6 30.2 1.9 7.2 1.9 13.2 6 18.1 12.3 4.9 6.3 7.3 14.5 7.3 24.5 0 7.7-1.4 14.2-4.2 19.5s-6.4 9.4-10.7 12.4c-4.3 3-8.7 5-13.2 6-6.1 1.2-14.8 1.8-26.4 1.8h-16.6V550H510V424.2z m-90.7 0h26.9L496.5 550h-27.6l-11-28.6h-50.3L397.2 550h-27l49.1-125.8z m229.1 273.3H352.6c-19.4 0-35.1-15.7-35.1-35.1v-295c0-5.5 4.5-10 10-10s10 4.5 10 10v295c0 8.3 6.8 15.1 15.1 15.1h295.8c5.5 0 10 4.5 10 10s-4.4 10-10 10z" fill="transparent" /><path d="M569.4 479.2c3.4-1.3 6-3.4 7.9-6.2 1.9-2.8 2.9-6.1 2.9-9.8 0-4.6-1.3-8.4-4-11.3-2.7-3-6.1-4.8-10.2-5.6-3-0.6-9.1-0.9-18.3-0.9h-12.3v35.7h13.9c10 0.1 16.7-0.6 20.1-1.9z" fill="transparent" /><path d="M648.4 677.5H352.6c-8.3 0-15.1-6.8-15.1-15.1v-295c0-5.5-4.5-10-10-10s-10 4.5-10 10v295c0 19.4 15.7 35.1 35.1 35.1h295.8c5.5 0 10-4.5 10-10s-4.4-10-10-10z" fill="transparent" /><path d="M865 386.5c11 0 20-9 20-20s-9-20-20-20h-69.7v-56.8c0-38.6-31.4-70-70-70h-27.8v-67.3c0-11-9-20-20-20s-20 9-20 20v67.3H611v-67.3c0-11-9-20-20-20s-20 9-20 20v67.3h-46.5v-67.3c0-11-9-20-20-20s-20 9-20 20v67.3H438v-67.3c0-11-9-20-20-20s-20 9-20 20v67.3h-85.8c-38.6 0-70 31.4-70 70v56.8h-69.7c-11 0-20 9-20 20s9 20 20 20h69.7V433h-69.7c-11 0-20 9-20 20s9 20 20 20h69.7v46.5h-69.7c-11 0-20 9-20 20s9 20 20 20h69.7V606h-69.7c-11 0-20 9-20 20s9 20 20 20h69.7v56.8c0 38.6 31.4 70 70 70H343v72.5c0 11 9 20 20 20s20-9 20-20v-72.5h46.5v72.5c0 11 9 20 20 20s20-9 20-20v-72.5H516v72.5c0 11 9 20 20 20s20-9 20-20v-72.5h46.5v72.5c0 11 9 20 20 20s20-9 20-20v-72.5h82.8c38.6 0 70-31.4 70-70V646H865c11 0 20-9 20-20s-9-20-20-20h-69.7v-46.5H865c11 0 20-9 20-20s-9-20-20-20h-69.7V473H865c11 0 20-9 20-20s-9-20-20-20h-69.7v-46.5H865zM755.3 702.7c0 16.5-13.5 30-30 30H312.2c-16.5 0-30-13.5-30-30v-413c0-16.5 13.5-30 30-30h413.1c16.5 0 30 13.5 30 30v413z" fill="currentColor" /><path d="M407.6 521.4h50.3l11 28.6h27.6l-50.4-125.8h-26.9l-49 125.8h27l10.4-28.6z m24.8-67.9l17.3 46.7h-34.3l17-46.7zM535.4 502.6H552c11.5 0 20.3-0.6 26.4-1.8 4.5-1 8.9-3 13.2-6 4.3-3 7.9-7.1 10.7-12.4s4.2-11.8 4.2-19.5c0-10-2.4-18.2-7.3-24.5-4.9-6.3-10.9-10.4-18.1-12.3-4.7-1.3-14.8-1.9-30.2-1.9H510V550h25.4v-47.4z m0-57.1h12.3c9.2 0 15.2 0.3 18.3 0.9 4.1 0.7 7.5 2.6 10.2 5.6 2.7 3 4 6.8 4 11.3 0 3.7-1 7-2.9 9.8-1.9 2.8-4.6 4.9-7.9 6.2-3.4 1.3-10.1 2-20.1 2h-13.9v-35.8zM626.5 424.2h25.4V550h-25.4z" fill="currentColor" /></svg>
               </div>
 
               <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
-                <div className="text-2xl font-semibold">Complete Pigu API </div>
-                <div className="text-md text-secondary w-3/4">
+                <div className="text-xl font-semibold">Complete Pigu API </div>
+                <div className="text-md text-secondary w-2/3">
                   Add products, manage orders, and update inventory all in one
                   place
                 </div>
               </div>
             </div>
-            <div className=" flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center   ">
-              <div className=" from-emerald-500 to-emerald-700 bg-gradient-to-br  p-3 rounded-md">
+            <div className=" flex  flex-col  space-y-4 md:items-start items-center  ">
+              <div className="text-[#1B45B4] dark:text-blue-500">
                 <svg
-                  className="w-14 h-14"
-                  fill="white"
+                  className="md:w-10 md:h-10 w-12 h-12"
+                  fill="currentColor"
                   viewBox="0 0 512 512"
                   id="svg2793"
                   version="1.1"
@@ -137,7 +129,7 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
 
               <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
-                <div className="text-2xl font-semibold">Seamless Integration</div>
+                <div className="text-xl font-semibold">Seamless Integration</div>
                 <div className="text-md text-secondary w-3/4">
                   Integration with your e-commerce and CRM. Connect 1C, Horizon
                   or Sap
@@ -145,15 +137,15 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
             </div>
 
-            <div className="flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center ">
-              <div className=" from-violet-500 to-orange-700 bg-gradient-to-br  p-3 rounded-md">
+            <div className="flex flex-col space-y-4  md:items-start items-center">
+              <div className=" text-[#1B45B4] dark:text-blue-500 bg-gradient-to-br  ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1"
-                  stroke="white"
-                  className="w-14 h-14"
+                  stroke="currentColor"
+                  className="w-12 h-12"
                 >
                   <title>Artificial Intelligence</title>
                   <path
@@ -165,7 +157,7 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
 
               <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
-                <div className="text-2xl font-semibold">
+                <div className="text-xl font-semibold">
                   Artificial Intelligence
                 </div>
                 <div className="text-md text-secondary w-3/4">
@@ -175,9 +167,9 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
             </div>
 
-             <div className=" flex md:flex-row flex-col md:space-x-6 space-x-0 space-y-4 md:space-y-0 items-center">
-              <div className=" from-cyan-500 to-blue-700 bg-gradient-to-br  p-3 rounded-md">
-               <svg fill="white" className="h-14 w-14"    stroke-width="0.5" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" >
+             <div className=" flex flex-col  space-y-4 md:items-start items-center">
+              <div className="text-[#1B45B4] dark:text-blue-500">
+               <svg fill="currentColor" className="h-12 w-12"  stroke-width="0.2" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" >
     <title>tools-line</title>
     <path d="M20,14H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V15A1,1,0,0,0,20,14Zm-.4,6.6H16.4V15.4h3.2Z" /><path d="M33.71,12.38,29.62,8.29A1,1,0,0,0,28.92,8h-5V6.05A2,2,0,0,0,22,4H13.84A1.92,1.92,0,0,0,12,6.05V8H7.08a1,1,0,0,0-.71.29L2.29,12.38a1,1,0,0,0-.29.71V28a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V13.08A1,1,0,0,0,33.71,12.38ZM14,6h8V8H14ZM32,17H22v1.93H32V28H4V18.93H14V17H4V13.5L7.5,10h21L32,13.5Z" />
     <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
@@ -185,7 +177,7 @@ export default function IndexLayout({ children }: LayoutProps) {
               </div>
 
               <div className="flex flex-col space-y-2  justify-center items-center md:items-start">
-                <div className="text-2xl font-semibold">
+                <div className="text-xl font-semibold">
                   Fully Customized
                 </div>
                 <div className="text-md text-secondary w-3/4">
@@ -209,40 +201,50 @@ export default function IndexLayout({ children }: LayoutProps) {
         </div>
       </div>
 
-      <div className="py-20 ">
-        <div className="text-center mb-8 text-4xl font-bold">
+      <div className="py-20 max-w-screen-xl px-4 mx-auto border-t mt-8 md:px-20">
+
+        <div>
+        <div className="mb-8 text-4xl font-bold">
           Solution You Can Trust
         </div>
 
+        <div>
+
+          With multiple integrations and a robust API, you can easily connect your existing tools and workflows to our platform. Our solution is designed to grow with your business, providing the flexibility and scalability you need to succeed.
+
+        </div>
+
+        </div>
+
         <div
-          style={{ backgroundImage: "url('/bg-module.jpg')" }}
-          className="  rounded-2xl  bg-neutral-900 bg-center  flex items-center bg-cover mx-20 px-20 justify-center md:h-48 py-10 shadow-xl"
+          
+          className="  rounded-2xl   flex   justify-start md:h-48 py-10 "
         >
-          <div className="px-10  flex md:space-x-10 space-y-20 md:space-y-0  items-center justify-center  md:flex-row flex-col ">
-            <div className="w-72  space-y-4  flex items-center flex-col">
-              <div className="text-neutral-300 text-lg">Shops connected</div>
-              <div className="text-[50px] font-bold text-white ">10+</div>
+          <div className="   flex md:space-x-10 space-y-10 md:space-y-0  items-center   md:flex-row flex-col ">
+            <div className="w-72  md:space-y-4 space-y-2   flex  flex-col">
+              <div className="text-lg">Shops connected</div>
+              <div className="md:text-[50px] text-4xl font-bold ">10+</div>
             </div>
 
-            <div className="w-72  space-y-4 flex items-center flex-col">
-              <div className="text-neutral-300 text-lg">Total Revenue</div>
-              <div className="text-[50px] font-bold text-white">10M+</div>
+            <div className="w-72  md:space-y-4 space-y-2  flex  flex-col">
+              <div className=" text-lg">Total Revenue</div>
+              <div className="md:text-[50px] text-4xl font-bold ">10M+</div>
             </div>
 
-            <div className="w-72  space-y-4 flex items-center flex-col">
-              <div className="text-neutral-300 text-lg">Orders Served</div>
-              <div className="text-[50px] font-bold text-white">50k+</div>
+            <div className="w-72  md:space-y-4 space-y-2 flex  flex-col">
+              <div className=" text-lg">Orders Served</div>
+              <div className="md:text-[50px] text-4xl font-bold ">50k+</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-gradient-to-b dark:from-neutral-900/50 dark:to-neutral-900/10  flex md:space-x-8 from-neutral-300 to-neutral-100 flex-col  md:px-10 px-4 py-14">
+      <div className="bg-gradient-to-b dark:from-neutral-900/50 dark:to-neutral-900/10  flex md:space-x-8 border-t  flex-col  md:px-10 px-4 py-14">
         <div className="text-center mb-8 text-4xl font-bold">
           Sell with Confidence
         </div>
 
-        <div className="relative flex md:space-x-8 space-x-0 space-y-8 md:space-y-0 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10   py-14">
+        <div className="flex md:space-x-8 space-x-0 space-y-8 md:space-y-0 from-neutral-300 to-neutral-100 flex-col md:flex-row items-center justify-center   mb-10   py-14">
       
 
           <div className="flex space-y-4 items-center md:items-start flex-col p-6  rounded ">

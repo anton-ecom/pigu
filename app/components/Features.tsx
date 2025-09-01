@@ -1,66 +1,84 @@
 import { Link } from "react-router";
 import {Feature} from "./Feature";
 import { useTheme } from "./ThemeContext";
+import {OrdersFeature} from "./features/OrdersFeature";
+
+import {FeatureBlock, type FeatureProps} from "./features/FeatureBlock";
 
 
 export function Features() {
 
   const theme = useTheme();
 
+  const orders :FeatureProps = {
+    header: "Orders",
+    subheader: "Enjoy full cycle order management all inside the platform. Process orders, print labels - all in just few clicks.",
+    features: [
+      "Effortlessly manage orders",
+      "Full Pigu API integration with all use-cases covered.",
+      "See new order instantly with Realtime Updates",
+      "Comprehensive filtering",
+      "Mass printing of labels"
+    ],
+    image: "orders"
+  }
+
+
+  const offers :FeatureProps = {
+    header: "Offers",
+    subheader: "Take full control of your pricing. Watch price updates in realtime, stay on top of competitors",
+    features: [
+      "Instant price changes",
+      "Price history and analytics",
+      "Buybox win/lose filters",
+      "Instant notification of price change",
+    ],
+    image: "offers"
+  }
+
+
+
+  const auto :FeatureProps = {
+    header: "Price Auto-Correction",
+    subheader: "Streamline your workflow with powerful automation tools.",
+    features: [
+      "Beat any competitors price in seconds",
+      "Full control of limits and profitability margins",
+      "Real-time monitoring",
+      "Instant notification of price change",
+      "History of price changes"
+    ],
+    image: "auto"
+  }
+
+
 
   return (
 
     <div>
 
-    <div className="py-20 flex justify-center bg-gradient-to-br from-[#6CEFEF] via-[#4648FF]  to-[#712FFF]">
+    <div className="py-20 flex justify-center bg-gradient-to-br  from-[#1B45B4]  to-[#1C2792] px-4 md:px-0">
       
-      <div> 
-         <div className="text-4xl font-semibold text-white">Features</div>
+      <div className="text-center flex flex-col space-y-4 text-white"> 
+         <div className="text-4xl font-semibold ">Features</div>
+
+         <div className="text-lg">Platform for full cycle Pigu seller management. From orders to Delivery to product management - all in one place.</div>
       </div>
 
 
 
     </div>
 
-     
-    <div className="px-4">
-    <div className="max-w-none mt-10">              
+    <div className="flex space-y-4 flex-col mx-auto max-w-screen-lg ">
+      
+      
+      <FeatureBlock {...orders} />
+      <FeatureBlock {...offers} />
+      <FeatureBlock {...auto} />
 
- 
+    </div>
 
-      <div className="flex md:space-x-16 items-center">
-       
-       <div className="w-1/2 ">     
-
-          <div className="p-2 dark:bg-neutral-800/50 rounded-lg border">  
-          <img className=" rounded-md py-0" src={`./screens/orders/screen_1_${theme.theme}.png`} alt="Orders Screen" />
-          </div>    
-
-      </div>
-
-      <div className="w-1/2">
-        
-         <div className="mb-4 flex space-y-2 flex-col">
-          <div className="md:text-3xl text-2xl font-semibold ">Orders</div>
-          <div>Enjoy full cycle order management. Process orders in just few clicks from your orders panel. 
-          </div>
-        </div>
-
-        <div className="flex flex-col space-y-2">
-          <Feature>Process thousands of orders per day with just one manager</Feature>
-          <Feature>Full Pigu API integration with all use-cases covered.</Feature>
-          <Feature>See new order instantly with Realtime Updates</Feature>
-          <Feature>Comprehensive filtering</Feature>
-          <Feature>Mass printing of labels</Feature>
-        </div>
-
-      </div> 
-
-      </div>
-
-      </div>
-
-      </div>
+  
 
     </div>
   );
