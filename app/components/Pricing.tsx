@@ -94,7 +94,7 @@ export function Pricing({ pricingData }: PricingProps) {
   const { theme } = useTheme();
 
   return (
-    <div className="py-12">
+    <div className="">
       {/* Header */}
       <div className="py-20 flex justify-center bg-gradient-to-br from-[#1B45B4] to-[#1C2792] px-4 md:px-0">
         <div className="text-center flex flex-col space-y-4 text-white">

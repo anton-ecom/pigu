@@ -19,8 +19,8 @@ export default function IndexLayout({ children }: LayoutProps) {
 
     <>
 
-    <div className="min-h-screen mx-auto flex flex-col items-stretch grow">
-      <div className="max-w-screen-xl shrink">
+    <div className="min-h-screen flex flex-col items-stretch grow">
+      <div className="max-w-screen-xl  mx-auto w-full">
         <Header textClass="dark:text-white text-black" />
       </div>
       <div className="grow">{children}</div>
