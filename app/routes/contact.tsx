@@ -279,7 +279,7 @@ export default function Component() {
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Email Us</h3>
                       <p className="text-gray-600 dark:text-gray-400">Get a response within 24 hours</p>
                       <a href="mailto:hello@pigu-automation.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        hello@pigu.shop
+                        hello@ecomdot.com
                       </a>
                     </div>
                   </div>

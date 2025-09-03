@@ -33,7 +33,7 @@ function MenuItem({
 }) {
   return (
     <Link to={item.url}>
-      <div className="flex  w-full space-x-2 md:text-base text-inherit">
+      <div className="flex  w-full space-x-2 md:text-lg text-inherit">
         <div className={textClass ?? "text-white"}>{item.name}</div>
       </div>
     </Link>

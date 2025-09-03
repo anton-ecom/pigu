@@ -20,6 +20,7 @@ export default function IndexLayout({ children }: LayoutProps) {
     <div className="max-w-screen-2xl mx-auto flex flex-col items-stretch min-h-screen">
       <div className="">
         <Header />
+
       </div>
 
       <div

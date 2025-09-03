@@ -15,7 +15,7 @@ import IndexLayout from "~/components/IndexLayout";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Pigu.shop - Marketplace management platform" },
+    { title: "Ecom Dot - Marketplace management platform" },
     { name: "description", content: "Comprehensive platform to manage Pigu marketplaces" },
   ];
 };

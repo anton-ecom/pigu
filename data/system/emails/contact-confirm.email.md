@@ -10,5 +10,5 @@ Your message has been received.
 We appreciate you reaching out. We will contact you shortly.
 
 Yours,
-Pigu.shop
+Ecomdot.com
 Ecom Europe Limited
